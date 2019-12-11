@@ -1,13 +1,15 @@
-## React Native Quiz App
+## React Native School Over-the-Air Updates Class
 
-A simple cross platform (iOS and Android) React Native quiz app. This example was put together for [React Native by Example](https://learn.handlebarlabs.com/p/react-native-by-example-free). Get started learning & mastering React Native for free!
+A simple cross platform (iOS and Android) React Native quiz app used for [React Native School's](https://www.reactnativeschool.com/) Over-the-Air updates class.
 
 ![Index Screen](./assets/index.png)
 ![Quiz Screen](./assets/quiz.png)
 
+You'll need to have the [React Native CLI installed](https://facebook.github.io/react-native/docs/getting-started) on your machine in order to follow along.
+
 ### Installation
 
-- `git clone https://github.com/ReactNativeSchool/react-native-quiz`
+- `git clone https://github.com/ReactNativeSchool/over-the-air-update-class`
 - `yarn install`/`npm install`
 
 ### Running
@@ -15,7 +17,5 @@ A simple cross platform (iOS and Android) React Native quiz app. This example wa
 - `yarn run ios`/`npm run ios` or `yarn run android`/`npm run android`
 
 ---
-
-This project was put together to serve as an example to help you in building your own React Native apps. Feel free to download it and tinker with it!
 
 > If you're interested in learning more about React Native be sure to visit [React Native School](https://www.reactnativeschool.com/) for dozens of React Native tutorials!
