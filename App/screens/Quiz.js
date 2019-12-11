@@ -59,6 +59,7 @@ class Quiz extends React.Component {
 
       if (nextIndex >= state.totalCount) {
         this.props.navigation.popToTop();
+        return {};
       }
 
       return {
@@ -77,8 +78,7 @@ class Quiz extends React.Component {
         style={[
           styles.container,
           {backgroundColor: this.props.navigation.getParam('color')},
-        ]}
-      >
+        ]}>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={styles.safearea}>
           <View>
