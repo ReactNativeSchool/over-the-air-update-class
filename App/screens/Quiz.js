@@ -1,42 +1,42 @@
-import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView } from "react-native";
+import React from 'react';
+import {View, StyleSheet, StatusBar, Text, SafeAreaView} from 'react-native';
 
-import { Button, ButtonContainer } from "../components/Button";
-import { Alert } from "../components/Alert";
+import {Button, ButtonContainer} from '../components/Button';
+import {Alert} from '../components/Alert';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#36B1F0",
+    backgroundColor: '#36B1F0',
     flex: 1,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   text: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 25,
-    textAlign: "center",
+    textAlign: 'center',
     letterSpacing: -0.02,
-    fontWeight: "600"
+    fontWeight: '600',
   },
   safearea: {
     flex: 1,
     marginTop: 100,
-    justifyContent: "space-between"
-  }
+    justifyContent: 'space-between',
+  },
 });
 
 class Quiz extends React.Component {
   state = {
     correctCount: 0,
-    totalCount: this.props.navigation.getParam("questions", []).length,
+    totalCount: this.props.navigation.getParam('questions', []).length,
     activeQuestionIndex: 0,
     answered: false,
-    answerCorrect: false
+    answerCorrect: false,
   };
 
   answer = correct => {
     this.setState(
       state => {
-        const nextState = { answered: true };
+        const nextState = {answered: true};
 
         if (correct) {
           nextState.correctCount = state.correctCount + 1;
@@ -49,7 +49,7 @@ class Quiz extends React.Component {
       },
       () => {
         setTimeout(() => this.nextQuestion(), 750);
-      }
+      },
     );
   };
 
@@ -63,20 +63,20 @@ class Quiz extends React.Component {
 
       return {
         activeQuestionIndex: nextIndex,
-        answered: false
+        answered: false,
       };
     });
   };
 
   render() {
-    const questions = this.props.navigation.getParam("questions", []);
+    const questions = this.props.navigation.getParam('questions', []);
     const question = questions[this.state.activeQuestionIndex];
 
     return (
       <View
         style={[
           styles.container,
-          { backgroundColor: this.props.navigation.getParam("color") }
+          {backgroundColor: this.props.navigation.getParam('color')},
         ]}
       >
         <StatusBar barStyle="light-content" />
