@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		341A5A1834E42217AE944AE1 /* libPods-OTAClass-OTAClassTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A4F32677C5E78FD5D4CCF3 /* libPods-OTAClass-OTAClassTests.a */; };
+		5D4830B727271AF7005DF91E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4830B627271AF7005DF91E /* File.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C3F2D463D41DD9365562C523 /* libPods-OTAClass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBCF07F31CA5E1863F36296 /* libPods-OTAClass.a */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = OTAClass/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OTAClass/main.m; sourceTree = "<group>"; };
 		30A4F32677C5E78FD5D4CCF3 /* libPods-OTAClass-OTAClassTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OTAClass-OTAClassTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4830B527271AF7005DF91E /* OTAClass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTAClass-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D4830B627271AF7005DF91E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = OTAClass/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DBCF07F31CA5E1863F36296 /* libPods-OTAClass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OTAClass.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5386D79F93B1222E772942F /* Pods-OTAClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTAClass.debug.xcconfig"; path = "Target Support Files/Pods-OTAClass/Pods-OTAClass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				5D4830B627271AF7005DF91E /* File.swift */,
+				5D4830B527271AF7005DF91E /* OTAClass-Bridging-Header.h */,
 			);
 			name = OTAClass;
 			sourceTree = "<group>";
@@ -104,7 +109,6 @@
 				EEB492E07C15F049E9E37E75 /* Pods-OTAClass-OTAClassTests.debug.xcconfig */,
 				E2C459FAF5B2EC138AFB7ADC /* Pods-OTAClass-OTAClassTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -412,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				5D4830B727271AF7005DF91E /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EEB492E07C15F049E9E37E75 /* Pods-OTAClass-OTAClassTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2C459FAF5B2EC138AFB7ADC /* Pods-OTAClass-OTAClassTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = OTAClassTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OTAClass;
+				SWIFT_OBJC_BRIDGING_HEADER = "OTAClass-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OTAClass;
+				SWIFT_OBJC_BRIDGING_HEADER = "OTAClass-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
