@@ -7,6 +7,7 @@ import {codePushDeploymentKey} from '../../index';
 export default class Updating extends React.Component {
   state = {
     text: 'Checking for Updates...',
+    progress: 0,
   };
 
   componentDidMount() {
@@ -40,6 +41,11 @@ export default class Updating extends React.Component {
           this.setState({text: nextText});
         }
       },
+      downloadProgress => {
+        const {receivedBytes, totalBytes} = downloadProgress;
+        const progress = (receivedBytes / totalBytes) * 100;
+        this.setState({progress: Math.ceil(progress)});
+      },
     );
   }
 
@@ -48,6 +54,9 @@ export default class Updating extends React.Component {
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={{fontSize: 20, fontWeight: 'bold', marginBottom: 20}}>
           {this.state.text}
+        </Text>
+        <Text style={{fontSize: 20, fontWeight: 'bold', marginBottom: 20}}>
+          {`${this.state.progress}%`}
         </Text>
         <ActivityIndicator size="large" />
       </View>
