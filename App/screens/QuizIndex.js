@@ -16,10 +16,12 @@ export default ({navigation}) => (
     <Button
       title="Check for Updates"
       onPress={() => {
-        codePush.sync({
-          deploymentKey: codePushDeploymentKey,
-          installMode: codePush.InstallMode.IMMEDIATE,
-          updateDialog: true,
+        codePush.checkForUpdate(codePushDeploymentKey).then(update => {
+          if (!update) {
+            alert('App is up to date!');
+          } else {
+            navigation.push('Updating');
+          }
         });
       }}
     />
