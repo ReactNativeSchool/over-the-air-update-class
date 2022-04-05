@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OTAClass</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true">mxgK73vzNKz1jLTsPmvZgsGexWmeo92VYT1Ci</string>
 </resources>
